@@ -74,8 +74,6 @@ export default function Meet() {
       const sundayTime = useCountdown(nextSunday11PM);
       const fridayTime = useCountdown(nextFriday10PM);
 
-      console.log(fridayTime.totals, sundayTime.totals);
-
       if (fridayTime.totals == 0) {
         setNextMeet(sundayTime);
         return;

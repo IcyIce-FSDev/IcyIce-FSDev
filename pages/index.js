@@ -23,7 +23,11 @@ export default function Home({ allPostsData }) {
       <section className={utilStyles.headingMd}>
         <p>
           Hi, I'm Robert. I'm a FullStack Software Developer and avid outdoor
-          enthusiast. You can contact me on{" "}
+          enthusiast.
+        </p>
+        <br />
+        <p>
+          You can contact me on{" "}
           <Link
             href={"https://www.linkedin.com/in/icyice-fsdev/"}
             target="_blank"
@@ -31,6 +35,7 @@ export default function Home({ allPostsData }) {
             Linkdin
           </Link>
         </p>
+        <br />
         <p>
           To view list of my projects, use this{" "}
           <Link href={"/projects"}>link</Link>
