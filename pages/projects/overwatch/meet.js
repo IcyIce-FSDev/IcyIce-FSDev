@@ -76,28 +76,22 @@ export default function Meet() {
 
       console.log(fridayTime.totals, sundayTime.totals);
 
-      console.log("checking");
-
       if (fridayTime.totals == 0) {
-        console.log("Setting Sunday");
         setNextMeet(sundayTime);
         return;
       }
 
       if (sundayTime.totals == 0) {
-        console.log("Setting friday");
         setNextMeet(fridayTime);
         return;
       }
 
       if (fridayTime.totals > sundayTime.totals) {
-        console.log("Setting Sunday");
         setNextMeet(sundayTime);
         return;
       }
 
       if (fridayTime.totals < sundayTime.totals) {
-        console.log("Setting friday");
         setNextMeet(fridayTime);
         return;
       }
