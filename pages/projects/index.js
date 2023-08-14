@@ -7,7 +7,9 @@ export default function ProjectsHome() {
       <div className={styles.backToHome}>
         <Link href="/">← Back to home</Link>
       </div>
+      <br />
       <h1 className={styles.header}>Projects</h1>
+      <br />
       <div>
         <h3>Where in the world?</h3>
         <p>This was a frontend Mentor challenge</p>
@@ -17,6 +19,7 @@ export default function ProjectsHome() {
         <br />
         <Link href="#">Github</Link>
       </div>
+      <br />
       <div>
         <h3>Overwatch Team Pages</h3>
         <p>
