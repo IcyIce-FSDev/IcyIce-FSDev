@@ -35,7 +35,6 @@ function getNextFriday10PM() {
   // Set the time to 10:00 PM in UTC
   nextFriday.setUTCHours(22, 0, 0, 0);
 
-  console.log(nextFriday);
   return nextFriday;
 }
 
@@ -52,13 +51,8 @@ function getNextSunday11PM() {
   // Set the time to 11:00 PM in UTC
   nextSunday.setUTCHours(23, 0, 0, 0);
 
-  console.log(nextSunday);
   return nextSunday;
 }
-
-const nextFriday10PM = getNextFriday10PM();
-
-const nextSunday11PM = getNextSunday11PM();
 
 export default function Meet() {
   const [nextMeet, setNextMeet] = useState({
@@ -69,10 +63,13 @@ export default function Meet() {
     totals: "Loading...",
   });
 
+  const [sunday, setSunday] = useState(getNextSunday11PM());
+  const [friday, setFriday] = useState(getNextFriday10PM());
+
   useEffect(() => {
     const timer = setInterval(() => {
-      const sundayTime = useCountdown(nextSunday11PM);
-      const fridayTime = useCountdown(nextFriday10PM);
+      const sundayTime = useCountdown(sunday);
+      const fridayTime = useCountdown(friday);
 
       if (fridayTime.totals == 0) {
         setNextMeet(sundayTime);
@@ -105,8 +102,8 @@ export default function Meet() {
         <br />
         <p>
           Current times we are meeting are{" "}
-          {`${moment(nextSunday11PM).format("dddd hh:mm a")}`} and{" "}
-          {`${moment(nextFriday10PM).format("dddd hh:mm a")}`}
+          {`${moment(friday).format("dddd hh:mm a")}`} and{" "}
+          {`${moment(sunday).format("dddd hh:mm a")}`}
         </p>
         <br />
         <h1>Next Meet in</h1>
