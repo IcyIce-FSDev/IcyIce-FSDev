@@ -55,7 +55,14 @@ function getNextSunday11PM() {
 }
 
 export default function Meet() {
-  const [nextMeet, setNextMeet] = useState({
+  const [nextSundayMeet, setNextSundayMeet] = useState({
+    days: "Loading...",
+    hours: "Loading...",
+    minutes: "Loading...",
+    seconds: "Loading...",
+    totals: "Loading...",
+  });
+  const [nextFridayMeet, setNextFridayMeet] = useState({
     days: "Loading...",
     hours: "Loading...",
     minutes: "Loading...",
@@ -71,25 +78,8 @@ export default function Meet() {
       const sundayTime = useCountdown(sunday);
       const fridayTime = useCountdown(friday);
 
-      if (fridayTime.totals == 0) {
-        setNextMeet(sundayTime);
-        return;
-      }
-
-      if (sundayTime.totals == 0) {
-        setNextMeet(fridayTime);
-        return;
-      }
-
-      if (fridayTime.totals > sundayTime.totals) {
-        setNextMeet(sundayTime);
-        return;
-      }
-
-      if (fridayTime.totals < sundayTime.totals) {
-        setNextMeet(fridayTime);
-        return;
-      }
+      setNextSundayMeet(sundayTime);
+      setNextFridayMeet(fridayTime);
     }, 1000);
 
     return () => clearInterval(timer);
@@ -106,12 +96,19 @@ export default function Meet() {
           {`${moment(sunday).format("dddd hh:mm a")}`}
         </p>
         <br />
-        <h1>Next Meet in</h1>
+        <h1>Next Friday Meet in</h1>
         <br />
-        <div>Days: {nextMeet.days}</div>
-        <div>Hours: {nextMeet.hours}</div>
-        <div>Minutes: {nextMeet.minutes}</div>
-        <div>Seconds: {nextMeet.seconds}</div>
+        <div>Days: {nextFridayMeet.days}</div>
+        <div>Hours: {nextFridayMeet.hours}</div>
+        <div>Minutes: {nextFridayMeet.minutes}</div>
+        <div>Seconds: {nextFridayMeet.seconds}</div>
+        <br />
+        <h1>Next Sunday Meet in</h1>
+        <br />
+        <div>Days: {nextSundayMeet.days}</div>
+        <div>Hours: {nextSundayMeet.hours}</div>
+        <div>Minutes: {nextSundayMeet.minutes}</div>
+        <div>Seconds: {nextSundayMeet.seconds}</div>
       </div>
     </Layout>
   );
