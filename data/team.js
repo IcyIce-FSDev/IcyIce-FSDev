@@ -258,46 +258,9 @@ const Team = [
       },
     },
   },
-  // Lunar
-  {
-    id: 8,
-    Name: "Lunar",
-    "Main Role": "Support",
-    "Off Role": "DPS",
-    Hours: {
-      Sunday: {
-        Start: "2023-08-10T16:00-07:00",
-        End: "2023-08-10T20:00-07:00",
-      },
-      Monday: {
-        Start: "2023-08-10T16:00-07:00",
-        End: "2023-08-10T20:00-07:00",
-      },
-      Tuesday: {
-        Start: "2023-08-10T16:00-07:00",
-        End: "2023-08-10T20:00-07:00",
-      },
-      Wednesday: {
-        Start: "2023-08-10T16:00-07:00",
-        End: "2023-08-10T20:00-07:00",
-      },
-      Thursday: {
-        Start: "2023-08-10T14:00-07:00",
-        End: "Any",
-      },
-      Friday: {
-        Start: "2023-08-10T23:00-07:00",
-        End: "2023-08-10T17:00-07:00",
-      },
-      Saturday: {
-        Start: "2023-08-10T12:00-07:00",
-        End: "Any",
-      },
-    },
-  },
   // Hitt
   {
-    id: 9,
+    id: 8,
     Name: "Hitt",
     "Main Role": "Support",
     "Off Role": "DPS",
@@ -334,7 +297,7 @@ const Team = [
   },
   // Pain
   {
-    id: 10,
+    id: 9,
     Name: "Pain",
     "Main Role": "Support",
     "Off Role": "DPS",
