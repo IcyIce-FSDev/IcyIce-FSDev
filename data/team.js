@@ -332,5 +332,42 @@ const Team = [
       },
     },
   },
+  // Wookie
+  {
+    id: 10,
+    Name: "Wookie",
+    "Main Role": "DPS",
+    "Off Role": "Support",
+    Hours: {
+      Sunday: {
+        Start: "Any",
+        End: "Any",
+      },
+      Monday: {
+        Start: "Any",
+        End: "Any",
+      },
+      Tuesday: {
+        Start: "Any",
+        End: "Any",
+      },
+      Wednesday: {
+        Start: "Any",
+        End: "Any",
+      },
+      Thursday: {
+        Start: "Any",
+        End: "Any",
+      },
+      Friday: {
+        Start: "Any",
+        End: "Any",
+      },
+      Saturday: {
+        Start: "Any",
+        End: "Any",
+      },
+    },
+  },
 ];
 export default Team;

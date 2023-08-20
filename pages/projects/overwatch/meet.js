@@ -96,14 +96,14 @@ export default function Meet() {
           {`${moment(sunday).format("dddd hh:mm a")}`}
         </p>
         <br />
-        <h1>Next Friday Meet in</h1>
+        <h1>Next {`${moment(friday).format("dddd")}`} Meet in</h1>
         <br />
         <div>Days: {nextFridayMeet.days}</div>
         <div>Hours: {nextFridayMeet.hours}</div>
         <div>Minutes: {nextFridayMeet.minutes}</div>
         <div>Seconds: {nextFridayMeet.seconds}</div>
         <br />
-        <h1>Next Sunday Meet in</h1>
+        <h1>Next {`${moment(sunday).format("dddd")}`} Meet in</h1>
         <br />
         <div>Days: {nextSundayMeet.days}</div>
         <div>Hours: {nextSundayMeet.hours}</div>
