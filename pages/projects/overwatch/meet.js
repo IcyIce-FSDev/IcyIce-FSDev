@@ -3,11 +3,12 @@ import moment from "moment";
 import { useEffect, useState } from "react";
 
 const useCountdown = (setDate) => {
-  // Convert setDate to UTC timestamp in milliseconds
-  const targetTimestamp = setDate.getTime();
+  const date = new Date(setDate);
+  // Convert setDate to UTC timestamp in seconds
+  const targetTimestamp = Math.floor(date.getTime() / 1000);
 
   // Time is in seconds
-  const time = Math.max(0, Math.floor((targetTimestamp - Date.now()) / 1000));
+  const time = Math.max(0, targetTimestamp - Math.floor(Date.now() / 1000));
 
   const format = (number) => {
     return number < 10 ? "0" + number : number.toString();
@@ -23,35 +24,37 @@ const useCountdown = (setDate) => {
 };
 
 function getNextFriday10PM() {
-  const now = new Date();
-  const currentDay = now.getUTCDay(); // Get the current day in UTC
-  const daysUntilFriday = (5 - currentDay + 7) % 7; // Calculate days until the next Friday
-  const nextFriday = new Date(
-    now.getUTCFullYear(),
-    now.getUTCMonth(),
-    now.getUTCDate() + daysUntilFriday
-  );
+  const utcNow = moment();
+  const utcMoment = utcNow.utc();
+  const daysUntilFriday = (5 - utcMoment.day() + 7) % 7;
+  // Create a new moment object for the next Friday at 10:00 PM UTC
+  const nextFridayUTC = utcMoment
+    .clone()
+    .add(daysUntilFriday, "days")
+    .hour(22)
+    .minute(0)
+    .second(0);
 
-  // Set the time to 10:00 PM in UTC
-  nextFriday.setUTCHours(22, 0, 0, 0);
+  // Return the timestamp of the next Friday at 10:00 PM UTC
 
-  return nextFriday;
+  return nextFridayUTC.format();
 }
 
 function getNextSunday11PM() {
-  const now = new Date();
-  const currentDay = now.getUTCDay(); // Get the current day in UTC
-  const daysUntilSunday = (7 - currentDay + 7) % 7; // Calculate days until the next Sunday
-  const nextSunday = new Date(
-    now.getUTCFullYear(),
-    now.getUTCMonth(),
-    now.getUTCDate() + daysUntilSunday
-  );
+  const utcNow = moment();
+  const utcMoment = utcNow.utc();
+  const daysUntilSunday = (7 - utcMoment.day() + 7) % 7;
 
-  // Set the time to 11:00 PM in UTC
-  nextSunday.setUTCHours(23, 0, 0, 0);
+  // Create a new moment object for the next Sunday at 11:00 PM UTC
+  const nextSundayUTC = utcMoment
+    .clone()
+    .add(daysUntilSunday, "days")
+    .hour(23) // 11:00 PM UTC
+    .minute(0)
+    .second(0);
 
-  return nextSunday;
+  // Return the timestamp of the next Sunday at 11:00 PM UTC
+  return nextSundayUTC.format();
 }
 
 export default function Meet() {
@@ -70,14 +73,13 @@ export default function Meet() {
     totals: "Loading...",
   });
 
-  const [sunday, setSunday] = useState(getNextSunday11PM());
   const [friday, setFriday] = useState(getNextFriday10PM());
+  const [sunday, setSunday] = useState(getNextSunday11PM());
 
   useEffect(() => {
     const timer = setInterval(() => {
       const sundayTime = useCountdown(sunday);
       const fridayTime = useCountdown(friday);
-
       setNextSundayMeet(sundayTime);
       setNextFridayMeet(fridayTime);
     }, 1000);
