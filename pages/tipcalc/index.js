@@ -58,13 +58,7 @@ export default function Tipcalc() {
 
   // Function to handle change of people
   const handlePeopleChange = (e) => {
-    const parseAmount = parseFloat(e.target.value);
-
-    if (!isNaN(parseAmount)) {
-      setPeopleAmount(parseAmount);
-    } else {
-      setPeopleAmount(1);
-    }
+    setPeopleAmount(e.target.value);
   };
 
   // Function to handle reseting form
@@ -85,6 +79,10 @@ export default function Tipcalc() {
 
   // Function to handle change in form to compute outputs
   useEffect(() => {
+    if (!peopleAmount) {
+      return;
+    }
+
     // If standard tip amounts used this will run
     if (!useCustomTip) {
       const percentTipSt = tipAmount / 100;
@@ -236,11 +234,15 @@ export default function Tipcalc() {
                   type="number"
                   id="people"
                   name="people"
-                  min="1"
                   step="1"
                   value={peopleAmount}
                   onChange={handlePeopleChange}
                   className={styles.peopleinput}
+                  onClick={() => {
+                    if (peopleAmount === 1) {
+                      setPeopleAmount("");
+                    }
+                  }}
                 />
               </span>
             </div>
