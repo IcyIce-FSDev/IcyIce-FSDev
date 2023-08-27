@@ -254,7 +254,7 @@
     flex-flow: column nowrap;
     align-items: center;
     background-color: hsl(185, 41%, 84%);
-    height: 100vh;
+    height: 920px;
     justify-content: space-evenly;
     font-family: "Space Mono", monospace;
     margin: 0 auto;
@@ -479,5 +479,6 @@
     border-radius: 5px;
     border: none;
     padding: 3% 20%;
+    margin-bottom: 10px;
   }
 }
