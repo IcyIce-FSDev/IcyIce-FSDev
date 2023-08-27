@@ -239,9 +239,7 @@ export default function Tipcalc() {
                   onChange={handlePeopleChange}
                   className={styles.peopleinput}
                   onClick={() => {
-                    if (peopleAmount === 1) {
-                      setPeopleAmount("");
-                    }
+                    setPeopleAmount("");
                   }}
                 />
               </span>
