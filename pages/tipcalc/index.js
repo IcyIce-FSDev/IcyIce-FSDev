@@ -263,7 +263,6 @@ export default function Tipcalc() {
             </button>
           </div>
         </div>
-        <Link href="/">← Return Home</Link>
       </div>
     </div>
   );
