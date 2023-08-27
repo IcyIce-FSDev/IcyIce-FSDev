@@ -49,6 +49,18 @@ export default function Home() {
               Website
             </Link>
           </div>
+          <br />
+          <div>
+            <h3>Tip Calculator</h3>
+            <p>
+              This was a free challenge found on frontendmentor.io, the goal was
+              to design a tip calculator
+            </p>
+            <br />
+            <Link href="/tipcalc" target="_blank">
+              Website
+            </Link>
+          </div>
         </div>
       </section>
     </Layout>
