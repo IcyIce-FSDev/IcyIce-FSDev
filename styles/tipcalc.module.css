@@ -135,6 +135,10 @@
     -moz-appearance: textfield;
   }
 
+  .tipbuttonhidden {
+    display: none;
+  }
+
   .peoplecontainer {
     display: flex;
     flex-flow: column;
@@ -355,7 +359,7 @@
   .tipbutton[type="number"][name="tipOptions"] {
     font-family: "Space Mono", monospace;
     font-size: 24px;
-    width: 114px;
+    width: 100%;
     border-radius: 5px;
     height: 100%;
     text-align: center;
@@ -371,6 +375,10 @@
   .tipbutton[type="number"][name="tipOptions"] {
     appearance: none;
     -moz-appearance: textfield;
+  }
+
+  .tipbuttonhidden {
+    display: none;
   }
 
   .peoplecontainer {
@@ -428,7 +436,7 @@
     align-items: center;
     justify-content: space-evenly;
     gap: 15%;
-    height: 35%;
+    height: 40%;
   }
 
   .outputamounts {

@@ -12,7 +12,7 @@ export default function Tipcalc() {
   const [tipAmount, setTipAmount] = useState(0);
   // Custom Tip Amount
   const [useCustomTip, setUseCustomTip] = useState(false);
-  const [customTip, setCustomTip] = useState("");
+  const [customTip, setCustomTip] = useState(0);
   // Number of People
   const [peopleAmount, setPeopleAmount] = useState(1);
   // Tip amount per person
@@ -51,14 +51,7 @@ export default function Tipcalc() {
       }
     }
 
-    if (id == "custom" && useCustomTip == false) {
-      setUseCustomTip(true);
-    }
-
     if (id == "custom") {
-      if (customTip === 0) {
-        setCustomTip("");
-      }
       setCustomTip(value);
     }
   };
@@ -92,10 +85,6 @@ export default function Tipcalc() {
 
   // Function to handle change in form to compute outputs
   useEffect(() => {
-    if (!billAmount || !tipAmount || (useCustomTip && !customTip)) {
-      return;
-    }
-
     // If standard tip amounts used this will run
     if (!useCustomTip) {
       const percentTipSt = tipAmount / 100;
@@ -110,10 +99,13 @@ export default function Tipcalc() {
 
       setPersonTip(roundedValues.tip.toFixed(2));
       setPersonTotal(roundedValues.total.toFixed(2));
+      return;
     }
 
     // If custom tip amount used this will run
     if (useCustomTip) {
+      console.log(`Tip custom`);
+
       const percentTipCu = customTip / 100;
       const totalTip = billAmount * percentTipCu;
       const tipPerPerson = totalTip / peopleAmount;
@@ -126,6 +118,7 @@ export default function Tipcalc() {
 
       setPersonTip(roundedValues.tip.toFixed(2));
       setPersonTotal(roundedValues.total.toFixed(2));
+      return;
     }
   }, [billAmount, tipAmount, useCustomTip, customTip, peopleAmount]);
 
@@ -194,12 +187,14 @@ export default function Tipcalc() {
                 })}
                 <div>
                   <input
-                    type={useCustomTip ? "number" : "radio"}
+                    type="number"
                     key="custom"
                     name="tipOptions"
                     value={customTip}
                     id="custom"
-                    className={styles.tipbutton}
+                    className={
+                      useCustomTip ? styles.tipbutton : styles.tipbuttonhidden
+                    }
                     onChange={handleTipChange}
                   />
                   <label
@@ -208,6 +203,15 @@ export default function Tipcalc() {
                     className={
                       useCustomTip ? styles.hiddentiplabel : styles.tiplabel
                     }
+                    onClick={() => {
+                      setUseCustomTip(true);
+                      const listOfRadios =
+                        document.getElementsByName("tipOptions");
+
+                      for (let radio of listOfRadios) {
+                        radio.checked = false;
+                      }
+                    }}
                   >
                     Custom
                   </label>
