@@ -296,42 +296,42 @@ const Team = [
     },
   },
   // Pain
-  {
-    id: 9,
-    Name: "Pain",
-    "Main Role": "Support",
-    "Off Role": "DPS",
-    Hours: {
-      Sunday: {
-        Start: "2023-08-10T20:00-07:00",
-        End: "Any",
-      },
-      Monday: {
-        Start: "2023-08-10T20:00-07:00",
-        End: "Any",
-      },
-      Tuesday: {
-        Start: "2023-08-10T20:00-07:00",
-        End: "Any",
-      },
-      Wednesday: {
-        Start: "2023-08-10T20:00-07:00",
-        End: "Any",
-      },
-      Thursday: {
-        Start: "2023-08-10T20:00-07:00",
-        End: "Any",
-      },
-      Friday: {
-        Start: "2023-08-10T20:00-07:00",
-        End: "Any",
-      },
-      Saturday: {
-        Start: "2023-08-10T20:00-07:00",
-        End: "Any",
-      },
-    },
-  },
+  // {
+  //   id: 9,
+  //   Name: "Pain",
+  //   "Main Role": "Support",
+  //   "Off Role": "DPS",
+  //   Hours: {
+  //     Sunday: {
+  //       Start: "2023-08-10T20:00-07:00",
+  //       End: "Any",
+  //     },
+  //     Monday: {
+  //       Start: "2023-08-10T20:00-07:00",
+  //       End: "Any",
+  //     },
+  //     Tuesday: {
+  //       Start: "2023-08-10T20:00-07:00",
+  //       End: "Any",
+  //     },
+  //     Wednesday: {
+  //       Start: "2023-08-10T20:00-07:00",
+  //       End: "Any",
+  //     },
+  //     Thursday: {
+  //       Start: "2023-08-10T20:00-07:00",
+  //       End: "Any",
+  //     },
+  //     Friday: {
+  //       Start: "2023-08-10T20:00-07:00",
+  //       End: "Any",
+  //     },
+  //     Saturday: {
+  //       Start: "2023-08-10T20:00-07:00",
+  //       End: "Any",
+  //     },
+  //   },
+  // },
   // Wookie
   {
     id: 10,
