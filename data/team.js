@@ -340,32 +340,32 @@ const Team = [
     "Off Role": "Support",
     Hours: {
       Sunday: {
-        Start: "Any",
-        End: "Any",
+        Start: "2023-08-10T14:00-07:00",
+        End: "2023-08-10T18:00-07:00",
       },
       Monday: {
-        Start: "Any",
-        End: "Any",
+        Start: "2023-08-10T14:00-07:00",
+        End: "2023-08-10T18:00-07:00",
       },
       Tuesday: {
-        Start: "Any",
-        End: "Any",
+        Start: "2023-08-10T14:00-07:00",
+        End: "2023-08-10T18:00-07:00",
       },
       Wednesday: {
-        Start: "Any",
-        End: "Any",
+        Start: "2023-08-10T14:00-07:00",
+        End: "2023-08-10T18:00-07:00",
       },
       Thursday: {
-        Start: "Any",
-        End: "Any",
+        Start: "2023-08-10T14:00-07:00",
+        End: "2023-08-10T18:00-07:00",
       },
       Friday: {
-        Start: "Any",
-        End: "Any",
+        Start: "2023-08-10T14:00-07:00",
+        End: "2023-08-10T18:00-07:00",
       },
       Saturday: {
-        Start: "Any",
-        End: "Any",
+        Start: "2023-08-10T14:00-07:00",
+        End: "2023-08-10T18:00-07:00",
       },
     },
   },

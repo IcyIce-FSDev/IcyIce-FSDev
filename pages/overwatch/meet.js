@@ -1,4 +1,4 @@
-import Layout from "../../../components/layoutOverwatch";
+import Layout from "../../components/layoutOverwatch";
 import moment from "moment";
 import { useEffect, useState } from "react";
 

@@ -1,4 +1,3 @@
-import Link from "next/link";
 import worldStyles from "../../styles/world.module.css";
 import data from "../../world-data/data.json";
 import Image from "next/image";

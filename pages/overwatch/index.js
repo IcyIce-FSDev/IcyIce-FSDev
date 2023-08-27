@@ -1,6 +1,6 @@
-import Layout from "../../../components/layoutOverwatch.js";
-import table from "../../../styles/Table.module.css";
-import Team from "../../../data/team.js";
+import Layout from "../../components/layoutOverwatch.js";
+import table from "../../styles/Table.module.css";
+import Team from "../../data/team.js";
 
 export default function Overwatch() {
   return (

@@ -1,6 +1,6 @@
-import Layout from "../../../components/layoutOverwatch";
-import table from "../../../styles/Table.module.css";
-import Team from "../../../data/team";
+import Layout from "../../components/layoutOverwatch";
+import table from "../../styles/Table.module.css";
+import Team from "../../data/team";
 import moment from "moment";
 
 export default function Schedules() {
