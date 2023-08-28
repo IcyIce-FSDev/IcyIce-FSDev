@@ -1,3 +1,4 @@
+import Head from "next/head";
 import styles from "../../styles/tipcalc.module.css";
 import Image from "next/image";
 import { useEffect, useState } from "react";
@@ -121,6 +122,9 @@ export default function Tipcalc() {
 
   return (
     <div className={styles.webpage}>
+      <Head>
+        <title>Tip Calculator</title>
+      </Head>
       <div className={styles.container}>
         <Image
           src="/tipcalc/logo.svg"

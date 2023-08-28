@@ -1,6 +1,7 @@
 import Image from "next/image";
 import styles from "../../styles/advice.module.css";
 import { useRef, useState, useEffect } from "react";
+import Head from "next/head";
 
 export default function Advice() {
   // Sets states for window size
@@ -46,7 +47,7 @@ export default function Advice() {
 
   // States for quote
   const [quoteId, setQuoteId] = useState(0);
-  const [quote, setQuote] = useState(``);
+  const [quote, setQuote] = useState(`Loading...`);
 
   async function getQuote() {
     const response = await fetch("https://api.adviceslip.com/advice");
@@ -58,6 +59,9 @@ export default function Advice() {
 
   return (
     <div className={styles.webpage}>
+      <Head>
+        <title>Advice Generator</title>
+      </Head>
       <div className={styles.quotebox}>
         <p className={styles.quotenum}>ADVICE #{quoteId}</p>
         <p className={styles.quote}>"{quote}"</p>

@@ -23,6 +23,10 @@
 .headingMd {
   font-size: 1.2rem;
   line-height: 1.5;
+  display: flex;
+  justify-content: center;
+  flex-flow: column;
+  align-items: center;
 }
 
 .borderCircle {
