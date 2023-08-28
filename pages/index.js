@@ -7,11 +7,16 @@ import { useState } from "react";
 
 export default function Home() {
   const [websites, setWebsites] = useState([
-    {
-      name: "Where in the World?",
-      descr: "This was a frontend Mentor challenge",
-      link: "/world",
-    },
+    // {
+    //   name: "",
+    //   descr: "",
+    //   link: "",
+    // },
+    // {
+    //   name: "Where in the World?",
+    //   descr: "This was a frontend Mentor challenge",
+    //   link: "/world",
+    // },
     {
       name: "Overwatch Team Pages",
       descr:
@@ -31,11 +36,6 @@ export default function Home() {
       advice`,
       link: "/advice",
     },
-    // {
-    //   name: "",
-    //   descr: "",
-    //   link: "",
-    // },
   ]);
 
   return (
