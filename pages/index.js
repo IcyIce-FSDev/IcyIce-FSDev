@@ -20,20 +20,18 @@ export default function Home() {
     {
       name: "Overwatch Team Pages",
       descr:
-        " This is an website I made for people on an overwatch team to know when next meet is",
+        "A roster page for group of friends, also says when next group meet is",
       link: "/overwatch",
     },
     {
       name: "Tip Calculator",
       descr:
-        "This was a free challenge found on frontendmentor.io, the goal was to design a tip calculator",
+        "This is a basic calculator that takes finds out how much to tip on a bill - Challenge by FrontEndMentor.io",
       link: "/tipcalc",
     },
     {
       name: "Advice Generator",
-      descr: `This was a free challenge found on frontendmentor.io, the goal was
-      to design a website that fetchs from an API an random piece of
-      advice`,
+      descr: `The goal was to design a website that fetchs a random piece of advice from a REST API - Challenge by FrontEndMentor.io`,
       link: "/advice",
     },
   ]);
