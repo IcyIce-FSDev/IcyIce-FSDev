@@ -1,7 +1,6 @@
 import styles from "../../styles/tipcalc.module.css";
 import Image from "next/image";
-import Link from "next/link";
-import { StrictMode, useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 
 const tipOptions = [12, 15, 20, 25, 30];
 

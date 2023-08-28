@@ -12,9 +12,9 @@ export default function Home() {
       </Head>
       <section className={utilStyles.headingMd}>
         <p>
-          Hi, I'm Robert. I'm a FullStack Software Developer and avid outdoor
-          enthusiast. I've been coding for over a year and half. If you want to
-          reach out please use the link(s) below
+          Hi, I'm a FullStack Software Developer and avid outdoor enthusiast.
+          I've been coding for over a year and half. If you want to reach out
+          please use the link(s) below
         </p>
         <br />
 
@@ -58,6 +58,19 @@ export default function Home() {
             </p>
             <br />
             <Link href="/tipcalc" target="_blank">
+              Website
+            </Link>
+          </div>
+          <br />
+          <div>
+            <h3>Advice Generator</h3>
+            <p>
+              This was a free challenge found on frontendmentor.io, the goal was
+              to design a website that fetchs from an API an random piece of
+              advice
+            </p>
+            <br />
+            <Link href="/advice" target="_blank">
               Website
             </Link>
           </div>
