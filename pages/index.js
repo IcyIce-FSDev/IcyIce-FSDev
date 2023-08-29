@@ -34,6 +34,12 @@ export default function Home() {
       descr: `The goal was to design a website that fetchs a random piece of advice from a REST API - Challenge by FrontEndMentor.io`,
       link: "/advice",
     },
+    {
+      name: "Ip Address Tracker",
+      descr:
+        "This website uses two separate APIs to allow you get location of an IP address - Challenge by FrontEndMentor.io",
+      link: "/ip-tracker",
+    },
   ]);
 
   return (
