@@ -20,7 +20,7 @@
     justify-content: flex-start;
     align-items: center;
     color: white;
-    background-image: url("../public/iptracker/pattern-bg-desktop.png");
+    background-image: url("/iptracker/pattern-bg-desktop.png");
     background-repeat: no-repeat;
     background-size: cover;
     position: relative;
@@ -146,7 +146,7 @@
     justify-content: flex-start;
     align-items: center;
     color: white;
-    background-image: url("../public/iptracker/pattern-bg-mobile.png");
+    background-image: url("/iptracker/pattern-bg-mobile.png");
     background-repeat: no-repeat;
     background-size: cover;
     position: relative;
