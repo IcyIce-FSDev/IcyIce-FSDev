@@ -1,10 +1,11 @@
 .htmlContent {
   position: absolute;
   z-index: 1;
-  top: 0; /* Position at the top */
+  top: 0;
   left: 0;
   width: 100%;
   height: 100vh; /* Set the height to 100% of the viewport */
+  overflow: auto; /* Enable scroll if content overflows viewport */
 }
 
 .threeJS {
@@ -12,5 +13,5 @@
   width: 100%;
   height: 100vh; /* Set the height to 100% of the viewport */
   z-index: 0; /* Ensure it's below the HTML content */
-  overflow-x: hidden;
+  overflow: hidden; /* Hide any overflow beyond viewport height */
 }
