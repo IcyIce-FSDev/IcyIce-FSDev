@@ -40,6 +40,12 @@ export default function Home() {
         "This website uses two separate APIs to allow you get location of an IP address - Challenge by FrontEndMentor.io",
       link: "/ip-tracker",
     },
+    {
+      name: "Twitch Chat bot",
+      descr:
+        "This is custom made bot that can fetch overwatch 2 stats and random pieces of advice",
+      link: "https://github.com/IcyIce-FSDev/twitch_chat_bot",
+    },
   ]);
 
   return (
