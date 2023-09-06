@@ -26,7 +26,7 @@ export default function Home() {
     {
       name: "Tip Calculator",
       descr:
-        "This is a basic calculator that takes finds out how much to tip on a bill - Challenge by FrontEndMentor.io",
+        "This is a basic calculator that finds out how much to tip on a bill - Challenge by FrontEndMentor.io",
       link: "/tipcalc",
     },
     {
@@ -43,7 +43,7 @@ export default function Home() {
     {
       name: "Twitch Chat bot",
       descr:
-        "This is custom made bot that can fetch overwatch 2 stats and random pieces of advice",
+        "This is a custom made bot that can fetch overwatch 2 stats and random pieces of advice",
       link: "https://github.com/IcyIce-FSDev/twitch_chat_bot",
     },
   ]);
