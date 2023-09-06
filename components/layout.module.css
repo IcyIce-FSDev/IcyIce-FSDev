@@ -9,6 +9,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    color: white;
   }
 
   .backToHome {
@@ -17,6 +18,9 @@
 
   .aboutme {
     width: 800px;
+    background-color: rgba(255, 255, 255, 0.5);
+    padding: 1%;
+    border: 2px solid silver;
   }
 
   .cardContainer {
@@ -27,7 +31,7 @@
   }
 
   .projCard {
-    border: 1px black solid;
+    border: 1px white solid;
     width: 25%;
     padding: 3%;
     display: flex;
@@ -35,6 +39,7 @@
     align-items: center;
     justify-content: space-between;
     margin: 1%;
+    color: white;
   }
 }
 
@@ -45,10 +50,17 @@
     margin: 3rem auto 6rem;
   }
 
+  .aboutme {
+    background-color: rgba(255, 255, 255, 0.5);
+    padding: 1%;
+    border: 2px solid silver;
+  }
+
   .header {
     display: flex;
     flex-direction: column;
     align-items: center;
+    color: white;
   }
 
   .backToHome {
@@ -58,5 +70,7 @@
   .projCard {
     padding: 3%;
     margin: 1%;
+    color: white;
+    border: 1px white solid;
   }
 }

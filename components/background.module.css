@@ -1,0 +1,16 @@
+.htmlContent {
+  position: absolute;
+  z-index: 1;
+  top: 0; /* Position at the top */
+  left: 0;
+  width: 100%;
+  height: 100vh; /* Set the height to 100% of the viewport */
+}
+
+.threeJS {
+  position: relative;
+  width: 100%;
+  height: 100vh; /* Set the height to 100% of the viewport */
+  z-index: 0; /* Ensure it's below the HTML content */
+  overflow-x: hidden;
+}
