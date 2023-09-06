@@ -17,15 +17,17 @@ const ThreeScene = ({ children }) => {
     renderer.setSize(window.innerWidth, window.innerHeight);
     document.getElementById("three-container").appendChild(renderer.domElement);
 
-    // Create a starry background
+    // Create a starry background with streaks
     const starsGeometry = new THREE.BufferGeometry();
     const starsMaterial = new THREE.PointsMaterial({
       color: 0xffffff,
       size: 0.02,
+      transparent: true, // Enable transparency
+      opacity: 0.5, // Initial opacity
     });
 
     const starsVertices = [];
-    for (let i = 0; i < 1000; i++) {
+    for (let i = 0; i < 5000; i++) {
       const x = (Math.random() - 0.5) * 2000;
       const y = (Math.random() - 0.5) * 2000;
       const z = (Math.random() - 0.5) * 2000;
@@ -46,9 +48,25 @@ const ThreeScene = ({ children }) => {
     const animate = () => {
       requestAnimationFrame(animate);
 
-      // Rotate the stars to create a sense of movement
-      stars.rotation.x += 0.0001;
-      stars.rotation.y += 0.0001;
+      // Move the stars along the Z-axis to create streaks and fade
+      starsGeometry.attributes.position.array.forEach((position, index) => {
+        if (index % 3 === 2) {
+          if (position < -1000) {
+            starsGeometry.attributes.position.array[index] = 1000;
+          } else {
+            // Adjust the speed of movement
+            starsGeometry.attributes.position.array[index] -= 1;
+
+            // Adjust opacity based on Z position for streak effect
+            const zPosition = starsGeometry.attributes.position.array[index];
+            if (zPosition > -20) {
+              const opacity = (zPosition + 20) / 20; // Opacity based on position
+              starsMaterial.opacity = opacity;
+            }
+          }
+        }
+      });
+      starsGeometry.attributes.position.needsUpdate = true;
 
       renderer.render(scene, camera);
     };
