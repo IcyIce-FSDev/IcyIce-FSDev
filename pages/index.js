@@ -16,35 +16,41 @@ export default function Home() {
     //   name: "Where in the World?",
     //   descr: "This was a frontend Mentor challenge",
     //   link: "/world",
+    // website: "Website"
     // },
     {
       name: "Overwatch Team Pages",
       descr:
         "A roster page for group of friends, also says when next group meet is",
       link: "/overwatch",
+      website: "Website",
     },
     {
       name: "Tip Calculator",
       descr:
         "This is a basic calculator that finds out how much to tip on a bill - Challenge by FrontEndMentor.io",
       link: "/tipcalc",
+      website: "Website",
     },
     {
       name: "Advice Generator",
       descr: `The goal was to design a website that fetchs a random piece of advice from a REST API - Challenge by FrontEndMentor.io`,
       link: "/advice",
+      website: "Website",
     },
     {
       name: "Ip Address Tracker",
       descr:
         "This website uses two separate APIs to allow you get location of an IP address - Challenge by FrontEndMentor.io",
       link: "/ip-tracker",
+      website: "Website",
     },
     {
       name: "Twitch Chat bot",
       descr:
         "This is a custom made bot that can fetch overwatch 2 stats and random pieces of advice",
       link: "https://github.com/IcyIce-FSDev/twitch_chat_bot",
+      website: "Github",
     },
   ]);
 
@@ -86,7 +92,7 @@ export default function Home() {
                   <p>{website.descr}</p>
                   <br />
                   <Link href={website.link} target="_blank">
-                    Website
+                    {website.website}
                   </Link>
                 </div>
               );
