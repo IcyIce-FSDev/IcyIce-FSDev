@@ -59,7 +59,9 @@ export default function IpTracker() {
       }
     }
 
-    fetchIPAddress();
+    if (!gotIp) {
+      fetchIPAddress();
+    }
   }, []);
 
   useEffect(() => {
