@@ -1,0 +1,15 @@
+.headingMd {
+  font-size: 1.2rem;
+  line-height: 1.5;
+  display: flex;
+  justify-content: center;
+  flex-flow: column;
+  align-items: center;
+}
+
+.aboutme {
+  width: 400px;
+  background-color: rgba(255, 255, 255, 0.5);
+  padding: 1%;
+  border: 2px solid silver;
+}

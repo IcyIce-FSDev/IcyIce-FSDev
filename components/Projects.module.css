@@ -12,17 +12,6 @@
     color: white;
   }
 
-  .backToHome {
-    margin: 3rem 0 0;
-  }
-
-  .aboutme {
-    width: 800px;
-    background-color: rgba(255, 255, 255, 0.5);
-    padding: 1%;
-    border: 2px solid silver;
-  }
-
   .cardContainer {
     display: flex;
     gap: 1%;
@@ -50,12 +39,6 @@
     margin: 3rem auto 6rem;
   }
 
-  .aboutme {
-    background-color: rgba(255, 255, 255, 0.5);
-    padding: 1%;
-    border: 2px solid silver;
-  }
-
   .header {
     display: flex;
     flex-direction: column;
@@ -63,8 +46,11 @@
     color: white;
   }
 
-  .backToHome {
-    margin: 3rem 0 0;
+  .cardContainer {
+    display: flex;
+    gap: 1%;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
   }
 
   .projCard {

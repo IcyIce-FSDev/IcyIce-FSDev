@@ -1,3 +1,5 @@
+"use client";
+
 import React, { useEffect } from "react";
 import * as THREE from "three";
 import styles from "./background.module.css";
@@ -75,10 +77,10 @@ const ThreeScene = ({ children }) => {
   }, []);
 
   return (
-    <div>
+    <body>
       <div id="three-container" className={styles.threeJS}></div>
-      <div className={styles.htmlContent}>{children}</div>
-    </div>
+      <main className={styles.htmlContent}>{children}</main>
+    </body>
   );
 };
 
