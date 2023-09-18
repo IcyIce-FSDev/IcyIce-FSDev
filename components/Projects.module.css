@@ -30,6 +30,10 @@
     margin: 1%;
     color: white;
   }
+
+  .projDes {
+    font-size: 18px;
+  }
 }
 
 @media only screen and (max-width: 1299px) {

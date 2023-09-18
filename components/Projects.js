@@ -10,9 +10,9 @@ export default function Projects() {
         {listProject.map((website) => {
           return (
             <div className={styles.projCard} key={website.name}>
-              <h3>{website.name}</h3>
+              <h2>{website.name}</h2>
               <br />
-              <p>{website.descr}</p>
+              <p className={styles.projDes}>{website.descr}</p>
               <br />
               <Link href={website.link} target="_blank">
                 {website.website}
@@ -59,7 +59,7 @@ const listProject = [
     gitLink: "https://github.com/IcyIce-FSDev/advice_gene",
   },
   {
-    name: "Ip Address Tracker",
+    name: "IP Tracker",
     descr:
       "This website uses two separate APIs to allow you get location of an IP address - Challenge by FrontEndMentor.io",
     link: "https://tracker-loc.vercel.app",
