@@ -74,4 +74,11 @@ const listProject = [
     website: "Github",
     gitLink: false,
   },
+  {
+    name: "Rock, Paper, Scissors",
+    descr: "A simple game that pits you against the program",
+    link: "https://rock-paper-scis.vercel.app/",
+    website: "Website",
+    gitLink: "https://github.com/IcyIce-FSDev/rock-paper-scis",
+  },
 ];
